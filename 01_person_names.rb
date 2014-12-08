@@ -156,3 +156,6 @@ crm = {
 #   Jane Otto
 #
 # ------- your code under here -----------
+crm[:people].each do |name|
+  puts "#{name[:first_name]} #{name[:last_name]}"
+end

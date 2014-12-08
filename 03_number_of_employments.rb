@@ -156,3 +156,7 @@ crm = {
 #   Jane - 0
 #
 # ------- your code under here -----------
+crm[:people].each do |person|
+  puts person[:first_name].to_s + " - " +
+  person[:employments].count.to_s
+end

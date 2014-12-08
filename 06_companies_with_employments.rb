@@ -166,3 +166,13 @@ crm = {
 #     Magdalen Wendy - Product Operations Officer
 #
 # ------- your code under here -----------
+crm[:companies].each do |company|
+  puts "#{company[1]}"
+  crm[:people].each do |person|
+    person[:employments].each do |employment|
+      if employment[:company_id] == company[0]
+        puts "  #{person[:first_name]} #{person[:last_name]} - #{employment[:title]}"
+      end
+    end
+  end
+end
